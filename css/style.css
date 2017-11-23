@@ -1,0 +1,455 @@
+@import url('https://fonts.googleapis.com/css?family=Amaranth|Bahiana|Kaushan+Script|Lobster|Permanent+Marker|Satisfy');
+@import url('https://fonts.googleapis.com/css?family=Germania+One|Passion+One');
+@font-face { font-family: 'Edo'; src: url('../fonts/edosz.ttf'); }
+@font-face { font-family: 'Gotham-Regular'; src: url('../fonts/Gotham-Book.otf'); }
+
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+.navbar-light .navbar-nav .nav-link {
+  color: #f8f9fa;
+  font-family: 'Germania One', cursive;
+  font-size: 19px;
+}
+
+.navbar-light .navbar-nav .nav-link.disabled {
+  color: #999ea2;
+}
+
+.mr-auto {
+  text-align: center; margin: auto;
+}
+
+.bg-video, .bgimg-2, .bgimg-3 {
+  position: relative;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.bgimg-2 {
+  background-image: url("../img/enaj2.JPG");
+  height: 300px;
+  min-height: 100%;
+}
+
+.bgimg-3 {
+  background-image: url("../img/enaj1.jpg");
+  min-height: 100%;
+}
+
+#inicio {
+  height: 100%;
+}
+
+#video-iframe { 
+  position: absolute; 
+  z-index: -100; 
+  width: 100%; 
+  height: 800px;
+}
+
+#video-background {
+/*  making the video fullscreen  */
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  opacity: 0.85;
+  z-index: -100;
+}
+
+.middle {
+  position: fixed;
+  left: 0;
+  top: 40%;
+  width: 100%;
+  text-align: center;
+  color: #000;
+  z-index: -99;
+  font-family: 'Bahiana', cursive;
+  color: white;
+}
+.middle h1 {
+  font-size: 6rem;
+}
+
+.middle hr {
+    width: 115px;
+    border: solid 1px;
+}
+
+#counter {
+  font-size: 40px;
+}
+
+.with-id {
+  text-align:center;
+  padding:90px 80px;
+  text-align: justify;
+}
+.with-id h2 {
+  padding-bottom: 4px;
+  font-family: 'Bahiana', cursive;
+  font-size: 55px;
+  color: black;
+}
+
+#palavra div{
+  background-color: #EEEEEE;
+}
+
+.content-section {
+  padding-top: 25px;
+}
+
+.content-section img {
+  height: 380px;box-shadow: 0 4px 21px 0 rgba(0, 0, 0, 1), 0 14px 33px 0 rgba(0, 0, 0, 0.19);border-radius: 6px;
+}
+
+#apresentacao div {
+  color: #777;background-color:white;
+}
+
+#apresentacao h3 {
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  font: 20px "Lato", sans-serif;
+  color: #111;
+}
+
+.hr-geral {
+  border: #d41515 solid 4px;
+  width: 125px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+
+.btn-pauta {
+  text-align: center;
+  color: #000;
+}
+.btn-pauta span.border {
+  background-color: #d41515;
+  color: #f7f7f7;
+  font-family: 'Bahiana', cursive; 
+  font-size: 35px;
+  padding: 18px;
+  letter-spacing: 5px;  
+}
+
+.caption {
+  position: absolute;
+  left: 0;
+  top: 44%;
+  width: 100%;
+  text-align: center;
+  color: #000;
+}
+
+.caption a, .btn-pauta a {
+  text-decoration: none;
+}
+
+.caption span.border {
+  padding: 18px;
+  letter-spacing: 5px;
+  background-color: #d41515;
+  color: #f7f7f7;
+  font-family: 'Bahiana', cursive; 
+  font-size: 35px;
+}
+
+/*
+.close {
+    font-size: 40px;
+}
+
+.close:hover, .close:focus {
+    cursor: pointer;
+}
+
+.modal-header {
+  background-color: #d41515;
+}
+
+.modal-title {
+  font-family: 'Bahiana';
+  text-align: center;
+  color: white;
+  font-size: 2.5rem;
+}
+
+.date-form {
+  height: 47px;
+}
+
+.button-submit-form, .button-close-form {
+  width: 8rem;
+}
+
+.button-submit-form {
+  font-family: 'Bahiana';
+  font-size: 25px;
+  background-color: #d41515;
+  border-radius: 0;
+  color: #fff;
+}
+
+.button-close-form {
+  font-family: 'Bahiana';
+  font-size: 25px;
+  border-color: #d41515;
+  color: black;
+  background-color: #fff;
+  border-radius: 0;
+}
+*/
+.turismo .row {
+  padding-bottom: 25px;
+}
+
+.container-img {
+    position: relative;
+    overflow: hidden;
+    height: 100%;
+    height: 350px;
+}
+
+h3.title-city {
+  top: 5%;
+  left: -14%;
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  font-family: 'Bahiana';
+}
+
+.img-turismo {
+  position: absolute;
+  opacity: 1;
+  display: block;
+  height: 99%;
+  transition: .5s;
+  backface-visibility: hidden;
+  box-shadow: 1px 1px 10px black;
+
+}
+
+.middle-img {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
+
+.middle-img a {
+  text-decoration: none;
+}
+
+.container-img:hover .img-turismo {
+  opacity: 0.3;
+  transform: scale(1.12,1.12); 
+}
+
+.container-img:hover .middle-img {
+  opacity: 1;
+}
+.container-img:hover h3.title-city {
+  opacity: 1;
+  left: 4%;
+}
+
+.view-text {
+  background-color: transparent;
+  color: #d41515;
+  font-size: 20px;
+  padding: 12px 25px;
+  font-family: 'Bahiana';
+  border: 3px solid #d41515; 
+  transition: .5s ease; 
+}
+.view-text:hover {
+  background-color: #d41515;
+  color: black;
+}
+
+.btn:focus, .btn-danger:focus {
+  box-shadow: none;
+}
+
+.button-cities {
+  font-family: 'Bahiana';
+  font-size: 25px;
+  background-color: #d41515;
+  border-color: #d41515;
+  border-radius: 0;
+  cursor: pointer;
+}
+
+.button-cities:hover {
+  background-color: #d41515;
+  border-color: #d41515;
+  color: black;
+}
+
+.button-cities:focus {
+  background-color: #d41515;
+  border-color: #d41515;
+  color: white                                                                                                                                                                                                                                                                                                                                        ;
+}
+
+.circles {
+  height: 195px;
+}
+
+.circles img {
+  width: 13rem;
+  height: 150px;
+}
+/*
+.circles-set p {
+  margin-top:15px;
+  color: red;
+  margin-bottom: 0;
+}*/
+
+.col-get-in-touch {
+  font-family: 'Germania One', cursive;
+  padding-top: 35px;
+}
+
+.col-get-in-touch address {
+  color: black;
+  font-size: 19px;
+  margin-bottom: 6px;
+  padding-bottom: 20px;
+}
+.col-get-in-touch address span {
+  display: inline-block;
+}
+.col-get-in-touch address i {
+  position: relative;
+  top: -14px;
+}
+#phones {
+  font-size: 19px;
+  padding-bottom: 20px;
+}
+
+.col-get-in-touch i {
+  color: #d41515;
+  font-size: 20px;
+  margin: 0 6px;
+  position: relative;
+  top: 3px;
+  
+}
+#phones li {
+  color: black;
+}
+#phones i, address i, p i {
+  width: 40px;
+  text-align: center;
+  padding: 8px;
+  border: #999ea2 solid 2px;
+  border-radius: 100%;
+}
+.col-get-in-touch a {
+  color: black;
+}
+.col-get-in-touch p {
+  line-height: 20px;
+  font-size: 20px;
+  padding-bottom: 20px;
+}
+
+.list-socials {
+  margin-top: 4px;
+  position: relative;
+  text-align: center;
+
+}
+.list-socials li {
+  display: inline-block;
+  margin-right: 8px;
+}
+
+.list-socials a {
+  display: block;
+  width: 28px;
+  height: 28px;
+  line-height: 28px;
+  text-align: center;
+}
+.list-socials i {
+  font-size: 22px;
+  margin: 7px auto;
+  
+}
+.form-control {
+  border-radius: 0;
+  border: 2px solid rgba(0,0,0,.15);
+  font-family: 'Bahiana';
+  font-size: 22px;
+}
+
+.btn-submit {
+  font-family: 'Bahiana';
+  font-size: 22px;
+  background-color: #d41515;
+  border-color: #d41515;
+  border-radius: 0;
+}
+
+.btn-submit:hover {
+  background-color: #d41515;
+  border-color: #d41515;
+  color: black;
+}
+.form-control:focus {
+  border: 2px solid rgba(212, 21, 21, 0.77);
+}
+.form-group input, .form-group textarea {
+  background-color: #fff;
+}
+
+.item-inner img {
+  width: 30%;
+}
+
+#mapa div {
+  height: 600px;
+}
+
+footer {
+  padding: 18px;background-color: rgb(191, 33, 33); font-family: 'Germania One', cursive; color: black;
+}
+
+#accordion {
+  padding: 10px 40px;
+}
+
+.card-header {
+  background-color: rgb(191, 33, 33);
+}
+.card-header a {
+  color: #fff;
+}
+
+.table-sm td, .table-sm th {
+  padding: 1rem;
+}
+.col-content {
+  padding-right: 30% !important;
+}
