@@ -47,7 +47,10 @@
 						<a class="nav-link" href="#portfolio">Conheça Alagoas</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link disabled">Notícias</a>
+						<a class="nav-link" href="#noticias">Notícias</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#noticias">Galeria</a>
 					</li>
 					<li class="nav-item">
 						<a class="nav-link" href="#patrocinio">Patrocínio</a>
@@ -835,29 +838,32 @@
 				<h2 class="text-center">Notícias</h2>
 				<hr class="hr-geral">
 				<div class="container" style="display: flex;">
-					<div class="main-img">
-						<img src="img/turismo-cidade-historica-de-penedo.jpg" style="">
-						<legend></legend>
+					<div id="tab1" class="main-news">
+						<a href="http://www.juceal.al.gov.br" target="_blank">
+							<img src="img/turismo-cidade-historica-de-penedo.jpg">
+							<legend class="tab1show">Colocar a legenda da notícia aqui lorem ipsum so pra passar pra outra linha</legend>
+							<legend class="tab2show">Testando a 2</legend>
+							<legend class="tab3show">Testando a 3</legend>
+							<legend class="tab4show">Testando a 4</legend>
+						</a>
 					</div>
-					<div class="thumbnails">
-						<div class="item" data-video="highlights">
+					<div class="thumbnails-news">
+						<div id="tab2" class="item" data-link="" data-img="turismo-cidade-historica-de-piranhas">
 							<div class="item-inner">
-								<img src="img/turismo-cidade-historica-de-marechal.jpg" alt="Noticia">
+								<img src="img/turismo-cidade-historica-de-piranhas.jpg" style="padding-top: 0;">
 							</div>
 						</div>
-						<div class="item" data-video="highlights">
+						<div id="tab3" class="item" data-link="" data-img="turismo-cidade-historica-de-marechal">
 							<div class="item-inner">
-								<img src="img/turismo-cidade-historica-de-marechal.jpg" alt="Noticia">
+								<img src="img/turismo-cidade-historica-de-marechal.jpg">
 							</div>
 						</div>
-						<div class="item" data-video="img/turismo-cidade-historica-de-marechal">
+						<div id="tab4" class="item" data-img="turismo-piacabucu">
 							<div class="item-inner">
-								<img src="img/turismo-cidade-historica-de-marechal.jpg" alt="Noticia">
+								<img src="img/turismo-piacabucu.jpg">
 							</div>
 						</div>
-					</div>
-
-					
+					</div>	
 
 				</div>
 
@@ -877,33 +883,34 @@
 						<img src="img/turismo-cidade-historica-de-penedo.jpg">
 						<legend></legend>
 					</div>
-					<div class="thumbnails">
-						<div class="item" data-video="img/turismo-cidade-historica-de-marechal">
+					<div class="thumbnails-img">
+						<div id="tab2" class="item" data-link="" data-img="turismo-cidade-historica-de-piranhas">
 							<div class="item-inner">
-								<img src="img/turismo-cidade-historica-de-marechal.jpg" alt="Noticia">
+								<img src="img/turismo-cidade-historica-de-piranhas.jpg" style="padding-top: 0;">
 							</div>
 						</div>
-						<div class="item" data-video="img/turismo-cidade-historica-de-marechal">
+						<div id="tab3" class="item" data-link="" data-img="turismo-cidade-historica-de-marechal">
 							<div class="item-inner">
-								<img src="img/turismo-cidade-historica-de-marechal.jpg" alt="Noticia">
+								<img src="img/turismo-cidade-historica-de-marechal.jpg">
 							</div>
 						</div>
-						<div class="item" data-video="img/turismo-cidade-historica-de-marechal">
+						<div id="tab4" class="item" data-link="" data-img="turismo-piacabucu">
 							<div class="item-inner">
-								<img src="img/turismo-cidade-historica-de-marechal.jpg" alt="Noticia">
+								<img src="img/turismo-piacabucu.jpg">
 							</div>
 						</div>
-					</div>
-
-					
+					</div>	
 
 				</div>
 
 				<div class="text-center">
-					<button class="button-cities btn btn-danger">+ Fotos</button>
-				</div>
-
-				
+					<dir>
+						<a href=""><h3 style="clear: both;">Confira todas as fotos!</h3></a>
+					</dir>
+					<div>
+						<button class="button-cities btn btn-danger">+ Fotos</button>
+					</div>	
+				</div>		
 
 			</div>
 
@@ -1064,57 +1071,7 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
 	<script src="https://player.vimeo.com/api/player.js"></script>
-	<script>
-
-		/* Background video */
-
-		var video = document.getElementById('video-iframe'); 
-		var player = new Vimeo.Player(video);
-
-		player.ready().then(function() { 
-			player.setVolume(0); 
-		});
-
-		/* Counter */
-		var countDownDate = new Date("Nov 28, 2017 08:00:00").getTime();
-
-		// Update the count down every 1 second
-		var x = setInterval(function() {
-
-			// Get todays date and time
-			var now = new Date().getTime();
-
-			// Find the distance between now an the count down date
-			var distance = countDownDate - now;
-
-			// Time calculations for days, hours, minutes and seconds
-			var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-			var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-			var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-			var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-			// Display the result in an element with id="counter"
-			document.getElementById("counter").innerHTML = days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
-
-			// If the count down is finished, write some text
-			if (distance < 0) {
-				clearInterval(x);
-				document.getElementById("counter").innerHTML = "ESPIRADO!";
-			}
-		}, 1000);
-
-		/* Cities buttons */
-
-		$(document).ready(function() {
-			$("#mostrar-turismo").on("hide.bs.collapse", function() {
-				$(".button-cities").html('Ver mais Cidades <span><i class="fa fa-angle-double-down" aria-hidden="true"></i></span>');
-			});
-			$("#mostrar-turismo").on("show.bs.collapse", function() {
-				$(".button-cities").html('Ocultar Cidades <span><i class="fa fa-angle-double-up" aria-hidden="true"></i></span>');
-			});
-		});
- 
-	</script>
+	<script src="js/script.js"></script>
 
 	<!--
 <style type="text/css">

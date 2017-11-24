@@ -424,10 +424,6 @@ h3.title-city {
   background-color: #fff;
 }
 
-.item-inner img {
-  width: 30%;
-}
-
 #mapa div {
   height: 600px;
 }
@@ -452,4 +448,8 @@ footer {
 }
 .col-content {
   padding-right: 30% !important;
+}
+.item-inner img {
+  width: 127%;
+  padding: 2px;
 }
