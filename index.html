@@ -8,6 +8,8 @@
 	<title>37º Enaj - Encontro Nacional de Juntas Comerciais</title>
 	<link rel="shortcut icon" href="img/enaj-logo.png">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/assets/owl.carousel.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/assets/owl.theme.default.min.css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<link rel="stylesheet" type="text/css" href="css/style-mobile.css">
@@ -176,7 +178,7 @@
 				<div class="col-md-6 caption div-left">
 					<a href="http://comuniceventos.com.br/evento/37-encontro-nacional-de-juntas-comerciais/387" target="_blank"><span class="border">INSCRIÇÕES</span></a>
 				</div>
-				<div class="col-md-6 caption div-right">
+				<div class="col-md-6 caption div-right" style="left: 50%;">
 					<a href="http://comunicviagens.com.br/eventos/37-encontro-nacional-de-juntas-comerciais/hoteis" target="_blank"><span class="border">RESERVE SEU HÓTEL</span></a>
 				</div>
 			</div>
@@ -186,7 +188,7 @@
 	</section>
 
 	<section id="programacao">
-		<div class="with-id" id="first-child" style="background-color: #EEEEEE;">
+		<div class="with-id" id="first-child" style="background-color: #fff;">
 			<h2 class="text-center">Programação</h2>
 			<hr class="hr-geral">
 			<div id="accordion" role="tablist">
@@ -569,7 +571,7 @@
 	</section>
 
 	<section id="portfolio">
-		<div class="with-id" style="color: #777;background-color:white;">
+		<div class="with-id" style="color: #777;background-color: #EEEEEE;">
 			<h2 class="text-center">CONHEÇA ALAGOAS</h2>
 			<hr class="hr-geral">
 			<div class="turismo" style="padding-top: 25px;">
@@ -832,85 +834,87 @@
 	</section>
 
 	<section id="noticias">
-		<div style="display: flex; background-color:#fff;">
+		<div class="row" style="display: flex; background-color:#fff; margin-right: 0;">
 
-			<div class="with-id col">
+			<div class="container-fluid with-id col noticia" style="width: 50%;">
 				<h2 class="text-center">Notícias</h2>
 				<hr class="hr-geral">
-				<div class="container" style="display: flex;">
-					<div id="tab1" class="main-news">
+
+				<div class="container">
+					<div id="tab1" class="main-news text-center" data-img="turismo-cidade-historica-de-penedo">
 						<a href="http://www.juceal.al.gov.br" target="_blank">
 							<img src="img/turismo-cidade-historica-de-penedo.jpg">
 							<legend class="tab1show">Colocar a legenda da notícia aqui lorem ipsum so pra passar pra outra linha</legend>
 							<legend class="tab2show">Testando a 2</legend>
 							<legend class="tab3show">Testando a 3</legend>
 							<legend class="tab4show">Testando a 4</legend>
+							
 						</a>
 					</div>
-					<div class="thumbnails-news">
-						<div id="tab2" class="item" data-link="" data-img="turismo-cidade-historica-de-piranhas">
+					<div class="thumbnails-news owl-carousel owl-theme">
+						<div id="tab2" class="item" data-link="https://github.com/karenngomes" data-img="turismo-cidade-historica-de-piranhas">
 							<div class="item-inner">
-								<img src="img/turismo-cidade-historica-de-piranhas.jpg" style="padding-top: 0;">
+								<img src="img/turismo-cidade-historica-de-piranhas.jpg"">
 							</div>
 						</div>
-						<div id="tab3" class="item" data-link="" data-img="turismo-cidade-historica-de-marechal">
+						<div id="tab3" class="item" data-link="https://github.com" data-img="turismo-cidade-historica-de-marechal">
 							<div class="item-inner">
 								<img src="img/turismo-cidade-historica-de-marechal.jpg">
 							</div>
 						</div>
-						<div id="tab4" class="item" data-img="turismo-piacabucu">
+						<div id="tab4" class="item" data-link="https://google.com" data-img="turismo-piacabucu">
 							<div class="item-inner">
 								<img src="img/turismo-piacabucu.jpg">
 							</div>
 						</div>
+						
 					</div>	
-
+					
+					<div class="text-center">
+						<button class="button-cities btn btn-danger">+ Notícias</button>
+					</div>
+				
 				</div>
-
-				<div class="text-center">
-					<button class="button-cities btn btn-danger">+ Notícias</button>
-				</div>
-
 				
 			</div>
 
-			<div class="with-id col">
+			<div class="container-fluid with-id col galeria" style="width: 50%;">
 				<h2 class="text-center">Galeria</h2>
 				<hr class="hr-geral">
-
-				<div class="container" style="display: flex;">
-					<div class="main-img">
-						<img src="img/turismo-cidade-historica-de-penedo.jpg">
-						<legend></legend>
+				<div class="container">
+					<div class="main-img text-center">
+						<a href="http://www.juceal.al.gov.br" target="_blank">
+							<img src="img/turismo-cidade-historica-de-penedo.jpg">
+						</a>
 					</div>
-					<div class="thumbnails-img">
-						<div id="tab2" class="item" data-link="" data-img="turismo-cidade-historica-de-piranhas">
+					<div class="text-center">
+						<a href=""><h3 style="clear: both;">Confira todas as fotos!</h3></a>
+					</div>
+					<div class="thumbnails-img owl-carousel owl-theme">
+						<div class="item" data-link="https://github.com/karenngomes" data-img="turismo-cidade-historica-de-piranhas">
 							<div class="item-inner">
 								<img src="img/turismo-cidade-historica-de-piranhas.jpg" style="padding-top: 0;">
 							</div>
 						</div>
-						<div id="tab3" class="item" data-link="" data-img="turismo-cidade-historica-de-marechal">
+						<div class="item" data-link="https://github.com" data-img="turismo-cidade-historica-de-marechal">
 							<div class="item-inner">
 								<img src="img/turismo-cidade-historica-de-marechal.jpg">
 							</div>
 						</div>
-						<div id="tab4" class="item" data-link="" data-img="turismo-piacabucu">
+						<div class="item" data-link="https://google.com" data-img="turismo-piacabucu">
 							<div class="item-inner">
 								<img src="img/turismo-piacabucu.jpg">
 							</div>
 						</div>
-					</div>	
+					</div>
+
+					<div class="text-center">
+						<div>
+							<button class="button-cities btn btn-danger">+ Fotos</button>
+						</div>	
+					</div>
 
 				</div>
-
-				<div class="text-center">
-					<dir>
-						<a href=""><h3 style="clear: both;">Confira todas as fotos!</h3></a>
-					</dir>
-					<div>
-						<button class="button-cities btn btn-danger">+ Fotos</button>
-					</div>	
-				</div>		
 
 			</div>
 
@@ -1068,6 +1072,7 @@
 
 
 	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/owl.carousel.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
 	<script src="https://player.vimeo.com/api/player.js"></script>

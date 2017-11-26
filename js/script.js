@@ -46,52 +46,94 @@ $(document).ready(function() {
 	});
 });
 
-/* Changing news and pictures*/
+/* Responsive News and Gallery */
+
+$(window).resize(function(){
+    if(window.innerWidth < 900) {
+        $('.noticia').css("width", "");
+    } else {
+    	$('.noticia').css("width", "50%");
+    }
+});
+
+/* Changing news, pictures and legend*/
 
 $(function(){
+
 	var $content = $('.tab1show, .tab2show, .tab3show, .tab4show').hide();
 	$('.tab1show').show();
 
+	$('.owl-carousel').owlCarousel({
+	    loop:true,
+	    dotClass: 'owl-dot',
+		dotsClass: 'owl-dots',
+		dots: true,
+	    responsive:{
+	        0:{
+	            items:1
+	        },
+	        600:{
+	            items:3
+	        },
+	        1000:{
+	            items:4
+	        }
+	    }
+	});
+
 	$(".thumbnails-news .item").on("click", function(){
+		
+		var news = $('.main-news img').attr('src');
+		var link = $('.main-news a').attr('href');
 
-			$(".main-news img").attr({
-				"src":"img/" + $(this).data('img') + ".jpg"					
-			});
 
-			$(".main-news a").attr({
-				"href":$(this).data('link')	
-			});
+		$(".main-news img").attr({
+			"src": $(this).find('.item-inner img').attr('src') 
+		});
 
-	        var $target = $('.' + this.id + 'show').show();
+		$(this).find('.item-inner img').attr({
+			"src": news
+		});
+
+		$(".main-news a").attr({
+			"href":$(this).data('link')	
+		});
+
+		$(this).data({
+			'link': link
+		});
+
+		var legend = $('.main-news img').attr('src');
+
+		if(legend == "img/turismo-cidade-historica-de-penedo.jpg"){
+			var $target = $('.tab1show').show();
+	  		$content.not($target).hide();
+		} else {
+			var $target = $('.' + this.id + 'show').show();
 		  	$content.not($target).hide();
-			/*if($(this).attr("id")=="tab1"){
-		        $('.tab1show').show();
-		        $('.tab2show, .tab3show, .tab4show').hide();
-	        }
-	        if($(this).attr("id")=="tab2"){
-		        $('.tab2show').show();
-		        $('.tab1show, .tab3show, .tab4show').hide();
-	        }
-	        if($(this).attr("id")=="tab3"){
-		        $('.tab3show').show();
-		        $('.tab1show, .tab2show, .tab4show').hide();
-	        }
-	        if($(this).attr("id")=="tab4"){
-		        $('.tab4show').show();
-		        $('.tab1show, .tab2show, .tab3show').hide();
-	        }*/
+		}
+		
+	});
 
-		});
-	
 	$(".thumbnails-img .item").on("click", function(){
+		var image = $('.main-img img').attr('src');
+		var link = $('.main-img a').attr('href');
 
-			$(".main-img img").attr({
-				"src":"img/" + $(this).data('img') + ".jpg",	
-			});
-
-			$(".main-img a").attr({
-				"href":$(this).data('link')	
-			});
-
+		$(".main-img img").attr({
+			"src": $(this).find('.item-inner img').attr('src') 
 		});
+
+		$(this).find('.item-inner img').attr({
+			"src": image
+		});
+
+		$(".main-img a").attr({
+			"href": $(this).data('link')
+		});
+
+		$(this).data({
+			'link': link
+		});
+	});
+
 });
