@@ -2,5 +2,48 @@
 	body {
 		width: 100%;
 	}
+	#inicio {
+		height: 0;
+	}
+	.with-id, #mapa div, footer {
+		margin-right: -20rem;
+	}
+	.container-img {
+		padding: 1.2rem 4rem;
+	}
+	.justify-content-md-center {
+		justify-content: center;
+	}
+	#first-child {
+		padding: 5.2rem 2rem;
+	}
+	#accordion {
+		padding: 0;
+	}
+	.table thead th {
+	    vertical-align: inherit;
+	}
+	#inscricoes {
+		width: 40rem;
+	}
+	
+}
 
+@media only screen and (max-width: 799px) {
+	.caption {
+		top: 0;
+	}
+	.div-left {
+		top: 27%;
+	}
+	.div-right {
+		top: 58%;
+		left: 0;
+	}
+}
+
+@media only screen and (min-width: 800px) {
+	.div-right {
+		left: 47%;
+	}
 }
