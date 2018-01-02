@@ -60,7 +60,7 @@ $(window).resize(function(){
 
 $(function(){
 
-	var $content = $('.tab1show, .tab2show, .tab3show, .tab4show').hide();
+	var $content = $('.tab1show, .tab2show, .tab3show, .tab4show, .tab5show, .tab6show, .tab7show, .tab8show').hide();
 	$('.tab1show').show();
 
 	$('.owl-carousel').owlCarousel({
@@ -105,7 +105,7 @@ $(function(){
 
 		var legend = $('.main-news img').attr('src');
 
-		if(legend == "img/turismo-cidade-historica-de-penedo.jpg"){
+		if(legend == "img/noticia-8.jpg"){
 			var $target = $('.tab1show').show();
 	  		$content.not($target).hide();
 		} else {

@@ -450,3 +450,9 @@ footer {
   padding-right: 30% !important;
 }
 
+.btn-nf {
+  margin-top: 1rem;
+}
+.owl-dots {
+  margin-bottom: -1rem;
+}
